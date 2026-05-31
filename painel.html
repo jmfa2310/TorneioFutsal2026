@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel Admin - Viver Almeida</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="protectAdmin(); renderAdmin()">
+<div class="wrap">
+  <div class="hero">
+    <div class="brand">
+      <img class="logo" src="img/logo.png" onerror="this.style.display='none'">
+      <div><h1>⚙️ Painel Admin</h1><p>Criar equipas, gerar calendário e inserir resultados.</p></div>
+    </div>
+    
+  </div>
+
+  <div class="card">
+    <h2>1. Criar / Alterar Equipas</h2>
+    <div class="grid" id="teamInputs"></div>
+    <button onclick="submitTeams()">Sortear Grupos</button>
+    <button class="secondary" onclick="generateCalendar()">Gerar Calendário</button>
+    <button class="secondary" onclick="createKnockout()">Atualizar Fase Final</button>
+    <button class="secondary" onclick="resetTournament()">Apagar Torneio</button>
+  </div>
+
+  <div class="card">
+    <h2>2. Resultados da Fase de Grupos</h2><p>Podes subir/descer jogos manualmente. Ao mudares a ordem, os horários são recalculados automaticamente pela nova ordem.</p>
+    <p>Quando guardares um resultado, a classificação atualiza automaticamente.</p>
+    <div id="adminMatches"></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Resultados da Fase Final</h2>
+    <p>A chave da fase final fica criada automaticamente. Conforme colocas os resultados, os quartos, meias, 3.º/4.º lugar, final e campeão vão atualizando.</p>
+    <div id="adminKnockout"></div>
+  </div>
+
+  <div class="card">
+    <h2>Pré-visualização Pública</h2>
+    <h3>Próximos</h3><div id="upcoming"></div>
+    <h3>Grupos</h3><div id="groups"></div><br>
+    <h3>Classificações</h3><div id="standings"></div><br>
+    <h3>Calendário</h3><div id="calendar"></div><br>
+    <h3>Fase Final</h3><div id="knockout"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
