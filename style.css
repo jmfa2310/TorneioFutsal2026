@@ -24,7 +24,7 @@ body{
     radial-gradient(circle at 20% 0%, rgba(35,213,255,.22), transparent 34%),
     radial-gradient(circle at 90% 10%, rgba(245,197,66,.22), transparent 30%),
     linear-gradient(rgba(2,6,23,.78),rgba(2,6,23,.92)),
-    url("img/cartaz.jpg") center/cover fixed;
+    url("img/cartaz.jpeg") center/cover fixed;
 }
 body:before{
   content:"";
