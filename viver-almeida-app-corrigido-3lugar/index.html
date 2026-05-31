@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viver Almeida Futsal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body onload="renderPublic(); setInterval(renderPublic, 60000)">
+<div class="wrap">
+  <div class="hero">
+    <div class="brand">
+      <img class="logo" src="img/logo.png" onerror="this.style.display='none'">
+      <div>
+        <h1>🏆 VIVER ALMEIDA FUTSAL</h1>
+        <p>Dashboard oficial com calendário, classificações, fase final e campeão em direto.</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="tabs">
+    <a class="tab active" data-tab="tab-proximos" onclick="showTab('tab-proximos')">🔥 Próximos</a>
+    <a class="tab" data-tab="tab-grupos" onclick="showTab('tab-grupos')">👥 Grupos</a>
+    <a class="tab" data-tab="tab-class" onclick="showTab('tab-class')">📊 Classificações</a>
+    <a class="tab" data-tab="tab-cal" onclick="showTab('tab-cal')">📅 Calendário</a>
+    <a class="tab" data-tab="tab-final" onclick="showTab('tab-final')">🏆 Fase Final</a>
+  </div>
+
+  <div id="tab-proximos" class="tab-content card"><h2>🔥 Próximos Jogos</h2><div id="upcoming"></div></div>
+  <div id="tab-grupos" class="tab-content card hidden"><h2>👥 Grupos</h2><div id="groups"></div></div>
+  <div id="tab-class" class="tab-content card hidden"><h2>📊 Classificações</h2><div id="standings"></div></div>
+  <div id="tab-cal" class="tab-content card hidden"><h2>📅 Calendário</h2><div id="calendar"></div></div>
+  <div id="tab-final" class="tab-content card hidden"><h2>🏆 Fase Final</h2><p>1.º de cada grupo direto nas meias. 2.º e 3.º jogam os quartos.</p><div id="knockout"></div></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
