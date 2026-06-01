@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin - Viver Almeida</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="brand">
+      <img class="logo" src="img/logo.png" onerror="this.style.display='none'">
+      <div><h1>🔐 Admin</h1><p>Área reservada para gerir o torneio.</p></div>
+    </div>
+    
+  </div>
+  <div class="card" style="max-width:440px;margin:auto">
+    <h2>Entrar</h2>
+    <input type="password" id="pass" placeholder="Palavra-passe">
+    <button onclick="login()">Entrar</button>
+    <p id="loginMsg"></p>
+    
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+
+<script src="app.js?v=firebase1"></script>
+</body>
+</html>
