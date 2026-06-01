@@ -60,7 +60,7 @@ function applyOfficialSchedule(){
 
 
 
-const STORAGE_KEY = "viverAlmeidaTorneioFirebaseV1";
+const STORAGE_KEY = "viverAlmeidaTorneioV6";
 
 
 const firebaseConfig = {
